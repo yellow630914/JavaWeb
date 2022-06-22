@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="demo" />
+        <module name="demo1" />
+        <module name="demo2" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ComcatTest" target="16" />
+      <module name="ComcatTest.main" target="16" />
+      <module name="ComcatTest.test" target="16" />
+      <module name="TomcatTest" target="16" />
+      <module name="TomcatTest.main" target="16" />
+      <module name="TomcatTest.test" target="16" />
+      <module name="TomcatWeb" target="16" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

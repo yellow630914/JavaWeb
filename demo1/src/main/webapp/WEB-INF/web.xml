@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <servlet-name>AddServlet</servlet-name>
+        <servlet-class>AddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddServlet</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deno01Servlet</servlet-name>
+        <servlet-class>deno01Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deno01Servlet</servlet-name>
+        <url-pattern>/demo01</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deno02Servlet</servlet-name>
+        <servlet-class>demo02Servlet</servlet-class>
+        <!--設定servlet啟動時機為伺服器開啟時就實例化,數字代表啟動順序,越小越先-->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deno02Servlet</servlet-name>
+        <url-pattern>/demo02</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deno03Servlet</servlet-name>
+        <servlet-class>demo03Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deno03Servlet</servlet-name>
+        <url-pattern>/demo03</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deno04Servlet</servlet-name>
+        <servlet-class>demo04Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deno04Servlet</servlet-name>
+        <url-pattern>/demo04</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deno05Servlet</servlet-name>
+        <servlet-class>demo05Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deno05Servlet</servlet-name>
+        <url-pattern>/demo05</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deno06Servlet</servlet-name>
+        <servlet-class>Demo06Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deno06Servlet</servlet-name>
+        <url-pattern>/demo06</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>deno07Servlet</servlet-name>
+        <servlet-class>Demo07Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deno07Servlet</servlet-name>
+        <url-pattern>/demo07</url-pattern>
+    </servlet-mapping>
+</web-app>
