@@ -1,6 +1,9 @@
 *{
 	color: threeddarkshadow;
 }
+a{
+	text-decoration: none;
+}
 body{
 	margin:0;
 	padding:0;
@@ -27,7 +30,7 @@ div{
 #tbl_fruit{
 	width:60%;
 	line-height:28px;
-	margin-top:120px;
+	margin-top:16px;
 	margin-left:20%;
 }
 #tbl_fruit , #tbl_fruit tr , #tbl_fruit th , #tbl_fruit td{
@@ -50,4 +53,11 @@ div{
 	border:1px solid lightgray;
 	width:80px;
 	height:24px;
+}
+
+.center{
+	text-align:center;
+}
+.f30{
+	font-size: 30px;
 }

@@ -20,11 +20,25 @@ public class indexServlet extends ViewBaseServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Connection conn = null;
         try {
-            conn = JDBCUtils.getDruidConnection();
-            List<Fruit> fruitList = JDBCUtils.getFruitList(conn);
+            Integer pageNo = 1;
+            String pageNoStr = req.getParameter("pageNo");
+            if(StringUtils.isNotEmpty(pageNoStr)){
+                pageNo = Integer.parseInt(pageNoStr);
+            }
 
             HttpSession session = req.getSession();
+            session.setAttribute("pageNo",pageNo);
+
+            conn = JDBCUtils.getDruidConnection();
+            List<Fruit> fruitList = JDBCUtils.getFruitListByPageNo(conn,pageNo);
+
             session.setAttribute("fruitList",fruitList);
+
+            Long fruitCount = JDBCUtils.getFruitCount(conn);
+            System.out.println(fruitCount);
+            Long pageCount = (fruitCount+5-1)/5;
+
+            session.setAttribute("pageCount",pageCount);
 
             super.processTemplate("index",req,resp);
         } catch (SQLException e) {
@@ -41,5 +55,4 @@ public class indexServlet extends ViewBaseServlet {
 
     }
 }
-
 

@@ -3,7 +3,9 @@ package sql;
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 import fruit.Fruit;
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import javax.management.Query;
 import javax.sql.DataSource;
@@ -38,9 +40,50 @@ public class JDBCUtils {
      */
     public static List<Fruit> getFruitList(Connection conn) throws SQLException {
         QueryRunner runner = new QueryRunner();
-        String sql = "select fname,price,fcount,remark from t_fruit";
+        String sql = "select fid,fname,price,fcount,remark from t_fruit";
         BeanListHandler<Fruit> handler = new BeanListHandler<>(Fruit.class);
         List<Fruit> fruitList = runner.query(conn,sql,handler);
         return fruitList;
+    }
+
+    public static List<Fruit> getFruitListByPageNo(Connection conn,Integer pageNo) throws SQLException {
+        QueryRunner runner = new QueryRunner();
+        String sql = "select * from t_fruit limit ?,5";
+        BeanListHandler<Fruit> handler = new BeanListHandler<>(Fruit.class);
+        List<Fruit> fruitList = runner.query(conn,sql,handler,(pageNo-1)*5);
+
+        return fruitList;
+    }
+
+    public static Fruit getFruitByFid(Connection conn,int fid) throws SQLException {
+        QueryRunner runner = new QueryRunner();
+        String sql = "select fid,fname,price,fcount,remark from t_fruit where fid=?";
+        BeanHandler<Fruit> handler = new BeanHandler<>(Fruit.class);
+        return runner.query(conn,sql,handler,fid);
+    }
+
+    public static void setFruit(Connection conn,Fruit fruit) throws SQLException {
+        QueryRunner runner = new QueryRunner();
+        String sql = "update t_fruit set fname=?,price=?,fcount=?,remark=? where fid=?";
+        runner.update(conn,sql,fruit.getFname(),fruit.getPrice(),fruit.getFcount(),fruit.getRemark(),fruit.getFid());
+    }
+
+    public static void delFruitById(Connection conn,int fid) throws SQLException {
+        QueryRunner runner = new QueryRunner();
+        String sql = "delete from t_fruit where fid = ?";
+        runner.update(conn,sql,fid);
+    }
+
+    public static void insertFruit(Connection conn,Fruit fruit) throws SQLException {
+        QueryRunner runner = new QueryRunner();
+        String sql = "insert into t_fruit(fname,price,fcount,remark)values(?,?,?,?)";
+        runner.update(conn,sql,fruit.getFname(),fruit.getPrice(),fruit.getFcount(),fruit.getRemark());
+    }
+
+    public static Long getFruitCount(Connection conn) throws SQLException {
+        QueryRunner runner = new QueryRunner();
+        String sql = "select count(*) from t_fruit";
+        ScalarHandler<Long> handler = new ScalarHandler<>();
+        return runner.query(conn,sql,handler);
     }
 }
