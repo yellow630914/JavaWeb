@@ -1,6 +1,5 @@
 package servlet;
 
-import servlet.StringUtils;
 import servlet.thymeleaf.ViewBaseServlet;
 import sql.JDBCUtils;
 

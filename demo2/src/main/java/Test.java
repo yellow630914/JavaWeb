@@ -4,12 +4,12 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class Test {
-    @org.testng.annotations.Test
+    //@org.testng.annotations.Test
     public void test(){
         Connection connection = null;
         try {
             connection = JDBCUtils.getDruidConnection();
-            System.out.println(JDBCUtils.getFruitCount(connection));
+            System.out.println(JDBCUtils.getFruitCount(connection,"a"));
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {

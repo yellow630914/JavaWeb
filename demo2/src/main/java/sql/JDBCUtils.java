@@ -46,11 +46,11 @@ public class JDBCUtils {
         return fruitList;
     }
 
-    public static List<Fruit> getFruitListByPageNo(Connection conn,Integer pageNo) throws SQLException {
+    public static List<Fruit> getFruitListByPageNo(Connection conn,String keyword,Integer pageNo) throws SQLException {
         QueryRunner runner = new QueryRunner();
-        String sql = "select * from t_fruit limit ?,5";
+        String sql = "select * from t_fruit where fname like ? or remark like ? limit ?,5";
         BeanListHandler<Fruit> handler = new BeanListHandler<>(Fruit.class);
-        List<Fruit> fruitList = runner.query(conn,sql,handler,(pageNo-1)*5);
+        List<Fruit> fruitList = runner.query(conn,sql,handler,"%"+keyword+"%","%"+keyword+"%",(pageNo-1)*5);
 
         return fruitList;
     }
@@ -80,10 +80,10 @@ public class JDBCUtils {
         runner.update(conn,sql,fruit.getFname(),fruit.getPrice(),fruit.getFcount(),fruit.getRemark());
     }
 
-    public static Long getFruitCount(Connection conn) throws SQLException {
+    public static Long getFruitCount(Connection conn,String keyword) throws SQLException {
         QueryRunner runner = new QueryRunner();
-        String sql = "select count(*) from t_fruit";
+        String sql = "select count(*) from t_fruit where fname like ? or remark like ?";
         ScalarHandler<Long> handler = new ScalarHandler<>();
-        return runner.query(conn,sql,handler);
+        return runner.query(conn,sql,handler,"%"+keyword+"%","%"+keyword+"%");
     }
 }

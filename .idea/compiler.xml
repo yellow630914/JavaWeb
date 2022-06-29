@@ -6,19 +6,31 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="demo3" />
+        <module name="demo4" />
+        <module name="demo7" />
+        <module name="demoIOC" />
+        <module name="book" />
+        <module name="qqzone" />
+        <module name="demoFilter" />
         <module name="demo" />
         <module name="demo1" />
-        <module name="demo2" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ComcatTest" target="16" />
-      <module name="ComcatTest.main" target="16" />
-      <module name="ComcatTest.test" target="16" />
-      <module name="TomcatTest" target="16" />
-      <module name="TomcatTest.main" target="16" />
-      <module name="TomcatTest.test" target="16" />
-      <module name="TomcatWeb" target="16" />
-    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="PREFER_TARGET_JDK_COMPILER" value="false" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-parameters" />
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="book" options="" />
+      <module name="demo" options="" />
+      <module name="demo1" options="" />
+      <module name="demo3" options="" />
+      <module name="demo4" options="" />
+      <module name="demo7" options="" />
+      <module name="demoFilter" options="" />
+      <module name="demoIOC" options="" />
+      <module name="qqzone" options="" />
+    </option>
   </component>
 </project>

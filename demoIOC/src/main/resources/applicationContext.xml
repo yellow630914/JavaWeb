@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans>
+    <bean id="fruitDAO" class="sql.JDBCUtils"/>
+    <bean id="fruitService" class="fruit.service.impl.FruitServiceImpl">
+        <!--描述依賴關係-->
+        <property name="fruitDAO" ref="fruitDAO"/>
+    </bean>
+    <!--這個bean標籤作用是,將來在servlet中涉及的名字對應的是fruit時,使用FruitController進行處裡-->
+    <bean id="fruit" class="fruit.controller.FruitController">
+        <!--描述依賴關係-->
+        <property name="fruitService" ref="fruitService"/>
+    </bean>>
+</beans>
+
+<!--
+Html: 超文本標記語言
+Xml: 可擴展標記語言
+
+Html是Xml的子集
+
+2.Xml包含三個部分
+1) Xml聲明,聲明必須在xml第一行
+-->

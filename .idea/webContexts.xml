@@ -4,6 +4,13 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/ComcatTest/src/main/webapp/hello.html" value="file://$PROJECT_DIR$/ComcatTest/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/book/src/main/webapp/WEB-INF/pages/cart/checkout.html" value="file://$PROJECT_DIR$/book/src/main/webapp/WEB-INF/pages/cart" />
+        <entry key="file://$PROJECT_DIR$/book/src/main/webapp/WEB-INF/pages/user/regist.html" value="file://$PROJECT_DIR$/book/src/main/webapp/WEB-INF/pages/user" />
+        <entry key="file://$PROJECT_DIR$/demo2/src/main/webapp/index.html" value="file://$PROJECT_DIR$/demo2/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/demo5/src/main/webapp/index.html" value="file://$PROJECT_DIR$/demo5/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/demo6/src/main/webapp/index.html" value="file://$PROJECT_DIR$/demo6/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/qqzone/src/main/webapp/frames/main.html" value="file://$PROJECT_DIR$/qqzone/src/main/webapp/frames" />
+        <entry key="file://$PROJECT_DIR$/qqzone/src/main/webapp/index.html" value="file://$PROJECT_DIR$/qqzone/src/main/webapp" />
       </map>
     </option>
   </component>

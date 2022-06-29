@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/demo2/target/demo2-1.0-SNAPSHOT/WEB-INF/lib/javassist-3.20.0-GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/demo2/target/demo2-1.0-SNAPSHOT/WEB-INF/lib/thymeleaf-3.0.11.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/demo2/target/demo2-1.0-SNAPSHOT/WEB-INF/lib/jcommander-1.82.jar!/" />
+      <root url="jar://$PROJECT_DIR$/demo2/target/demo2-1.0-SNAPSHOT/WEB-INF/lib/unbescape-1.1.6.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/demo2/target/demo2-1.0-SNAPSHOT/WEB-INF/lib/attoparser-2.0.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/demo2/target/demo2-1.0-SNAPSHOT/WEB-INF/lib/druid-1.2.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/demo2/target/demo2-1.0-SNAPSHOT/WEB-INF/lib/jquery-3.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/demo2/target/demo2-1.0-SNAPSHOT/WEB-INF/lib/jsr305-3.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/demo2/target/demo2-1.0-SNAPSHOT/WEB-INF/lib/commons-dbutils-1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/demo2/target/demo2-1.0-SNAPSHOT/WEB-INF/lib/slf4j-simple-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/demo2/target/demo2-1.0-SNAPSHOT/WEB-INF/lib/testng-7.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/demo2/target/demo2-1.0-SNAPSHOT/WEB-INF/lib/protobuf-java-3.19.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/demo2/target/demo2-1.0-SNAPSHOT/WEB-INF/lib/ognl-3.1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/demo2/target/demo2-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/demo2/target/demo2-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-8.0.29.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

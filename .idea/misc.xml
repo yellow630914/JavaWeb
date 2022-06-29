@@ -2,21 +2,37 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/book" />
     <file type="web" url="file://$PROJECT_DIR$/ComcatTest" />
     <file type="web" url="file://$PROJECT_DIR$/demo" />
     <file type="web" url="file://$PROJECT_DIR$/demo1" />
     <file type="web" url="file://$PROJECT_DIR$/demo2" />
+    <file type="web" url="file://$PROJECT_DIR$/demo3" />
+    <file type="web" url="file://$PROJECT_DIR$/demo4" />
+    <file type="web" url="file://$PROJECT_DIR$/demo4/target/demo3-1.0-SNAPSHOT/WEB-INF/web.xml" />
+    <file type="web" url="file://$PROJECT_DIR$/demo6" />
+    <file type="web" url="file://$PROJECT_DIR$/demo7" />
+    <file type="web" url="file://$PROJECT_DIR$/demoFilter" />
+    <file type="web" url="file://$PROJECT_DIR$/demoIOC" />
+    <file type="web" url="file://$PROJECT_DIR$/qqzone" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/demo/pom.xml" />
         <option value="$PROJECT_DIR$/demo1/pom.xml" />
-        <option value="$PROJECT_DIR$/demo2/pom.xml" />
+        <option value="$PROJECT_DIR$/demo3/pom.xml" />
+        <option value="$PROJECT_DIR$/demo4/pom.xml" />
+        <option value="$PROJECT_DIR$/demo5/pom.xml" />
+        <option value="$PROJECT_DIR$/demo7/pom.xml" />
+        <option value="$PROJECT_DIR$/demoIOC/pom.xml" />
+        <option value="$PROJECT_DIR$/demoFilter/pom.xml" />
+        <option value="$PROJECT_DIR$/qqzone/pom.xml" />
+        <option value="$PROJECT_DIR$/book/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="corretto-1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" default="true" project-jdk-name="16" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
